@@ -2,16 +2,223 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	
-	<title></title>
-	
+	<title>YourApp</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
+<header>
+		<div class="logo">
+			<strong>Your</strong>App<sup>TM</sup>
+		</div>
+		
+		<div id="userPanel">
+			<svg id="bell" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g id="_x36__6_">
+				<g>
+					<path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+						c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/></g></g>
+			</svg>
+		
+			<img src="img/lego1.jpg" alt="profile picture">
+			<div id="user">Steve Sinclair</div>
+		</div>
+</header>
 
+<div id="mainWrap">
+	
+	<nav role="navigation">
+	  <ul>
+	    <li><a href="index.html" class="nav-links selected"><img src="icons/icon-dashboard.svg" title="Dashboard" alt="link to Dashboard page"></a></li>
+	    <li><a href="#" class="nav-links"><img src="icons/icon-members.svg" title="Members" alt="link to Members page"></a></li>
+	    <li><a href="#" class="nav-links"><img src="icons/icon-visits.svg" title="Visits" alt="link to Visits page"></a></li>
+	    <li><a href="#" class="nav-links"><img src="icons/icon-settings.svg" title="Settings" alt="link to Settings page"></a></li>
+	  </ul>
+	</nav>
+	
+	<main>
+	
+		<!-- SUBHEADER -->
+		
+		<div id="subheader"
+				<h1>Dashboard</h1>
+			<div class="searchArea">
+				<input type="text" placeholder="search">
+			</div>
+		</div>
+		
+		<!-- ALERT -->
+		
+		<div id="alert">
+			
+			<span>
+				<strong>Alert!</strong> There is a strong possibility you will ignore this!
+			</span>
+			
+			<button id="alertClose"><strong>X</strong></button>
+			
+		</div>
+		
+		<!-- CHARTS -->
+		
+		<div id="traffic">
+			<h2>Traffic</h2>
+			<canvas id="trafficChart"></canvas>
+		</div>
+		
+		<div class="col-2">
+			<div id="dailyTraffic">
+				<h2>Daily Traffic</h2>
+				<canvas id="dailyTrafficChart"></canvas>
+			</div>
+		
+			<div id="mobileUsers">
+				<h2>Mobile Users</h2>
+				<canvas id="mobileUsersChart"></canvas>
+			</div>
+		</div>
+		
+		<!-- Social -->
+		
+		<div id="social-container">
+			<h2>Social Stats</h2>
+			
+				<div class="socialStats">	
+				 	<img src="icons/icon-twitter.svg" alt="Number of Followers on Twitter">
+					Twitter
+					<span>10,345</span>
+				</div>
+				
+				<div class="socialStats">
+					<img src="icons/icon-facebook.svg" alt="Number of followers on Facebook">
+					Facebook
+					<span>8,739</span>
+				</div>
+				
+				<div class="socialStats">
+					<img src="icons/icon-google-plus.svg" alt="Number of followers on Google+">
+					Google+
+					<span>2,530</span>
+				</div>
+		</div>
+		
+		<!-- MEMBER ACTIVITY -->
+		
+		<div class="col-2">
+			<div id="newMembers">
+				<h2>New Members</h2>
+				
+				<div class="newMember-user">
+					<img src="img/lego1.jpg">
+						<div class="nameEmail">
+							<span class="activity-title">Todd Blanc</span>
+							<a class="activity-subtitle" href="mailto:demo@demo.com">toddblanc@gmail.com</a>
+						</div>
+					<span class="activity-date">4/21/17</span>
+				</div>
+				<div class="newMember-user">
+					<img src="img/lego1.jpg">
+						<div class="nameEmail">
+							<span class="activity-title">Tina Green</span>
+							<a class="activity-subtitle" href="mailto:demo@demo.com">tinagreen@gmail.com</a>
+						</div>
+					<span class="activity-date">4/21/17</span>
+				</div>
+				<div class="newMember-user">
+					<img src="img/lego1.jpg">
+						<div class="nameEmail">
+							<span class="activity-title">Tom Redding</span>
+							<a class="activity-subtitle" href="mailto:demo@demo.com">tomredding@gmail.com</a>
+						</div>
+					<span class="activity-date">4/21/17</span>
+				</div>
+				<div class="newMember-user">
+					<img src="img/lego1.jpg">
+						<div class="nameEmail">
+							<span class="activity-title">Tasha Bloom</span>
+							<a class="activity-subtitle" href="mailto:demo@demo.com">tashabloom@gmail.com</a>
+						</div>
+					<span class="activity-date">4/21/17</span>
+				</div>
+				
+			</div>
+			
+			<div id="recentActivity">
+				<h2>Recent Activity</h2>
+				
+				<div class="user-activity">
+					<img src="img/lego1.jpg">
+						<div class="activityTime">
+							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
+							<span class="activity-subtitle">4 hours ago</span>
+						</div>
+					<img src="icons/icon-arrowRight.svg">
+				</div>
+				<div class="user-activity">
+					<img src="img/lego1.jpg">
+						<div class="activityTime">
+							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
+							<span class="activity-subtitle">4 hours ago</span>
+						</div>
+					<img src="icons/icon-arrowRight.svg">
+				</div>
+				<div class="user-activity">
+					<img src="img/lego1.jpg">
+						<div class="activityTime">
+							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
+							<span class="activity-subtitle">4 hours ago</span>
+						</div>
+					<img src="icons/icon-arrowRight.svg">
+				</div>
+				<div class="user-activity">
+					<img src="img/lego1.jpg">
+						<div class="activityTime">
+							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
+							<span class="activity-subtitle">4 hours ago</span>
+						</div>
+					<img src="icons/icon-arrowRight.svg">
+				</div>
+				
+			</div>
+		</div>
+		
+		<!-- MESSAGES + SETTINGS -->
+		
+		<div class="col-2">
+			<div id="messageUser">
+				<h2>Message User</h2>
+				<input type="text" placeholder="Search for User" />
+				<textarea placeholder="Message for User"></textarea>
+				<button>SEND</button>
+			</div>
+			
+			<div id="settings">
+				<h2>Settings</h2>
+				Send Email Notifications
+				<input type="checkbox">
+				Set Profile to Public
+				<input type="checkbox">
+				<select>
+					<option selected disabled>Select Timezone</option>
+					<option>2000 B.C.</option>
+					<option>1955 A.D.</option>
+					<option>2700 A.D.X</option>
+				</select>
+				<button>SAVE</button>
+				<button>CANCEL</button>	
+
+			</div>
+		</div>
+		
+	</main>
+
+</div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js" type="text/javascript"></script>
+<script src="js/app.js" type="text/javascript"></script>
 </body>
 </html>
