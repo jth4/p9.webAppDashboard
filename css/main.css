@@ -1,6 +1,4 @@
-/* ////////////////////////// */
-/*////////////////////////////////// Global */
-/* ////////////////////////// */
+/* Global */
 
 *{
 	box-sizing: border-box;
@@ -41,9 +39,7 @@ button {
 	border-right: 1px solid #ddd;
 }
 
-/* ////////////////////////// */
-/*////////////////////////////////// Header */
-/* ////////////////////////// */
+/* Header */
 
 header {
 	top: 0;
@@ -53,35 +49,32 @@ header {
 	
 }
 
+.header-list {
+	display: flex;
+	align-items: center;
+}
+
 .logo {
 	font-size: 24px;
 	float: left;
-	margin: 20px 0 0 15px;
+	margin-right: auto;
 }
 
-#userPanel {
-	font-size: 18px;
-	float: right;
-	
+.notification-bell {
+	width: 35px;
 }
 
-#bell {
-	width: 30px;
-	height: 30px;
-}
-
-header img {
+.userAvatar img {
 	border-radius: 50%;
 	width: 40px;
 }
 
-#userName {
-	display: inline;
+.header-list :not(:first-child) {
+	margin-right: 15px;
+	
 }
 
-/* ////////////////////////// */
-/* /////////////////////////////////// Nav */
-/* ////////////////////////// */
+/* Nav */
 
 nav {
 	float: left;
@@ -104,9 +97,7 @@ nav img {
 	
 }
 
-/* ////////////////////////// */
-/*//////////////////////////////// Subheader */
-/* ////////////////////////// */
+/* Subheader */
 
 #subheader {
 	background-color: #eee;
@@ -147,9 +138,7 @@ main h2 {
 	padding: 0 10px;
 }
 
-/* ////////////////////////// */
-/*//////////////////////////////////// Alert */
-/* ////////////////////////// */
+/* Alert */
 
 #alert,
 .noAlerts {
@@ -179,39 +168,41 @@ main h2 {
 	transition: opacity 1s ease-in-out;
 	
 }
-/* ////////////////////////// */
-/*////////////////////////////// Charts */
-/* ////////////////////////// */
+
+/* Charts */
 
 canvas {
 	padding: 0 10px;
 }
 
-/* ////////////////////////// */
-/*////////////////////////////// Social Widgets */
-/* ////////////////////////// */
+/* Social Widgets */
 
-#social-container img {
-	width: 50px;
-}
-
-.socialStats {
-	border: 1px solid #333;
+.social-box-main {
+	border: 1px solid #ddd;
 	display: inline-block;
-	padding: 20px;
+	padding: 20px 3%;
 	width: 30%;
 	margin: 1%;
-	height: ;
-
+	background: #eee;
 }
 
-.socialStats span{
-	font-size: 2em;
+.social-icon {
+	background: #27344d;
+	border-radius: 50%;
+	fill: white;
+	padding: 10px;
+	display: inline-block;
 }
 
-/* ////////////////////////// */
-/*//////////////////// Member Activity Widgets */
-/* ////////////////////////// */
+.socialNetwork {
+	color: #415677;
+}
+
+.socialNumbers {
+	font-size: 1.5em;
+}
+
+/* Member Activity Widgets */
 
 #newMembers img,
 #recentActivity img {
@@ -247,9 +238,7 @@ canvas {
 	float: right;
 }
 
-/* ////////////////////////// */
-/*//////////////////////////////// Clearfix */
-/* ////////////////////////// */
+/* Clearfix */
 
 .clearfix:after {
   content: "";
@@ -257,9 +246,7 @@ canvas {
   clear: both;
 }
 
-/* ////////////////////////// */
-/*//////////////////////////////// Media Q */
-/* ////////////////////////// */
+/* Media Q */
 
 @media screen and (min-width:480px) {
 	.col-2 > div{
@@ -269,6 +256,23 @@ canvas {
 	}
 }
 
-@media scree and (mind-width:1024px) {
+@media screen and (min-width:768px){
+	
+	
+	.social-icon {
+		width: 100px;
+		height: 100px;
+		float: left;
+	}
+	.social-stats-box {
+		float: right;
+	}
+	.socialNumbers {
+		font-size: 3em;
+	}
+	
+}
+
+@media screen and (min-width:1024px) {
 	
 }
