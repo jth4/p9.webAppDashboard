@@ -54,7 +54,7 @@ close.addEventListener('click', function () {
 // Periodic Visitors Chart
 // =======================
 
-trafficWeekly();
+
 
 let trafficBtnMonthly = document.getElementById('traffic-btn-monthly');
 let trafficBtnWeekly = document.getElementById('traffic-btn-weekly');
@@ -67,6 +67,7 @@ trafficBtnWeekly.addEventListener( 'click', trafficWeekly );
 trafficBtnDaily.addEventListener( 'click' , trafficDaily  );
 trafficBtnHourly.addEventListener('click' , trafficHourly );
 
+trafficWeekly();
 
 function trafficMonthly() {
 
@@ -94,6 +95,7 @@ function trafficMonthly() {
 	    }
 	});
 
+	buttonChange(trafficBtnMonthly);
 };
 
 function trafficWeekly() {
@@ -122,6 +124,7 @@ function trafficWeekly() {
 	    }
 	});
 
+	buttonChange(trafficBtnWeekly);
 };
 
 function trafficDaily() {
@@ -149,7 +152,8 @@ function trafficDaily() {
 	    		}
 	    }
 	});
-
+	
+	buttonChange(trafficBtnDaily);
 };
 
 
@@ -178,9 +182,30 @@ function trafficHourly() {
 	    		}
 	    }
 	});
-
+	
+	buttonChange(trafficBtnHourly);
 };
 
+
+// Change Button Style
+
+function buttonChange(periodicBtn) {
+	
+	var trafficBtns = [trafficBtnWeekly, 
+						trafficBtnDaily, 
+						trafficBtnHourly, 
+						trafficBtnMonthly];
+	
+	for(i=0; i < trafficBtns.length; i+=1) {
+		if(trafficBtns[i] === periodicBtn) {
+			trafficBtns[i].className = 'selected';
+		} else {
+			periodicBtn.className = '';
+		}
+	};
+};
+
+//-------------------------------------------------------
 
 // =========================
 // Daily Traffic Chart (bar)
