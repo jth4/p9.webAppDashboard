@@ -28,17 +28,21 @@ var chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ['4/20-4/27','4/20-4/27','4/20-4/27','4/20-4/27','4/20-4/27','4/20-4/27','4/20-4/27'],
         datasets: [{
             label: "My First dataset",
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgba(65,86,119,.3)',
+            borderColor: '#415677',
             data: [0, 10, 5, 2, 20, 30, 45],
         }]
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+    	legend: {
+    		display: false
+    		}
+    }
 });
 
 // ===================
@@ -48,21 +52,24 @@ var chart = new Chart(ctx, {
 var ctx = document.getElementById('dailyTrafficChart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
-    type: 'line',
+    type: 'bar',
 
     // The data for our dataset
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ["M", "Tu", "W", "Th", "F", "Sa", "Su"],
         datasets: [{
-            label: "My First dataset",
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: '#415677',
+            borderColor: '#415677',
             data: [0, 10, 5, 2, 20, 30, 45],
         }]
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+    	legend: {
+    		display: false
+    		}
+    }
 });
 
 // ===================
@@ -72,19 +79,36 @@ var chart = new Chart(ctx, {
 var ctx = document.getElementById('mobileUsersChart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
-    type: 'line',
+    type: 'doughnut',
 
     // The data for our dataset
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ["Phones", "Tablets", "Desktop"],
         datasets: [{
             label: "My First dataset",
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45],
+            backgroundColor: [
+            	'rgba(165,86,19,.3)',
+            	'rgba(65,186,119,.6)',
+            	'rgba(65,86,119,.9)'
+            	],
+            borderColor: 'rgb(65,86,119)',
+            data: [20, 30, 45],
         }]
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+    	legend: {
+    		position: 'right',
+    		labels : { boxWidth: 15 }
+    	},
+    	layout: {
+            padding: {
+                left: 0,
+                right: 70,
+                top: 20,
+                bottom: 0
+            }
+        }
+    }
 });

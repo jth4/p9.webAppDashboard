@@ -78,7 +78,13 @@
 		<!-- CHARTS -->
 		
 		<div id="traffic">
-			<h2>Traffic</h2>
+			<ul class="traffic-list clearfix">
+				<li><h2>Traffic</h2></li>
+				<li><a href="#">Hourly</a></li>
+				<li><a href="#">Daily</a></li>
+				<li class="selected"><a href="#">Weekly</a></li>
+				<li><a href="#">Monthly</a></li>
+			</ul>
 			<canvas id="trafficChart"></canvas>
 		</div>
 		
@@ -90,7 +96,7 @@
 		
 			<div id="mobileUsers">
 				<h2>Mobile Users</h2>
-				<canvas id="mobileUsersChart"></canvas>
+				<canvas id="mobileUsersChart" height="20"></canvas>
 			</div>
 		</div>
 		
@@ -158,7 +164,7 @@
 			<div id="newMembers">
 				<h2>New Members</h2>
 				
-				<div class="newMember-user">
+				<div class="activity-item">
 					<img src="img/lego1.jpg">
 						<div class="nameEmail">
 							<span class="activity-title">Todd Blanc</span>
@@ -166,7 +172,7 @@
 						</div>
 					<span class="activity-date">4/21/17</span>
 				</div>
-				<div class="newMember-user">
+				<div class="activity-item">
 					<img src="img/lego1.jpg">
 						<div class="nameEmail">
 							<span class="activity-title">Tina Green</span>
@@ -174,7 +180,7 @@
 						</div>
 					<span class="activity-date">4/21/17</span>
 				</div>
-				<div class="newMember-user">
+				<div class="activity-item">
 					<img src="img/lego1.jpg">
 						<div class="nameEmail">
 							<span class="activity-title">Tom Redding</span>
@@ -182,7 +188,7 @@
 						</div>
 					<span class="activity-date">4/21/17</span>
 				</div>
-				<div class="newMember-user">
+				<div class="activity-item">
 					<img src="img/lego1.jpg">
 						<div class="nameEmail">
 							<span class="activity-title">Tasha Bloom</span>
@@ -198,7 +204,7 @@
 			<div id="recentActivity">
 				<h2>Recent Activity</h2>
 				
-				<div class="user-activity">
+				<div class="activity-item">
 					<img src="img/lego1.jpg">
 						<div class="activityTime">
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
@@ -206,7 +212,7 @@
 						</div>
 					<img src="icons/icon-arrowRight.svg">
 				</div>
-				<div class="user-activity">
+				<div class="activity-item">
 					<img src="img/lego1.jpg">
 						<div class="activityTime">
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
@@ -214,7 +220,7 @@
 						</div>
 					<img src="icons/icon-arrowRight.svg">
 				</div>
-				<div class="user-activity">
+				<div class="activity-item">
 					<img src="img/lego1.jpg">
 						<div class="activityTime">
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
@@ -222,7 +228,7 @@
 						</div>
 					<img src="icons/icon-arrowRight.svg">
 				</div>
-				<div class="user-activity">
+				<div class="activity-item">
 					<img src="img/lego1.jpg">
 						<div class="activityTime">
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>

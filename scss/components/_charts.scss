@@ -1,4 +1,44 @@
-canvas {
-	padding: 0 10px;
-	border-bottom: 1px solid #ddd;
+// Traffic
+
+#traffic {
+	@extend %brdr-btm;
+}
+
+.traffic-list {
+}
+
+.traffic-list li:first-of-type{
+	float: left;
+	margin-right: auto;
+}
+
+.traffic-list li:not(:first-child) {
+	background: $color-prim;
+	border-radius: 5px;
+	color: white;
+	padding: 5px;
+	float: right;
+	margin-left: 5px;
+	font-size: .8em;
+	font-weight: bold;
+	letter-spacing: .8px;
+}
+
+.selected {
+	background-color: $accent !important;
+}
+
+//Daily Traffic
+#dailyTraffic {
+	@extend %brdr-btm;
+}
+
+//Mobile Users
+#mobileUsers {
+	@extend %brdr-btm;
+	
+}
+
+#mobileUsersChart {
+	width: 50px;
 }

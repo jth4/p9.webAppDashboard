@@ -1,9 +1,11 @@
-@media screen and (min-width:480px) {
+@media #{$brk-tablet} {
+
 	.col-2 > div{
 		width: 49%;
 		display: inline-block;
 	}
 	.col-2 > div:first-child{
-		border-right: 1px solid #ddd;
+
 	}
+	
 }

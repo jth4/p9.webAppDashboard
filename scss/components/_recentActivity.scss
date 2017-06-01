@@ -1,28 +1,36 @@
-#newMembers {
-	padding: 0 10px;
-}
-
-#newMembers img,
-#recentActivity img {
-	border-radius: 50%;
-	width: 30px;
-}
-
-.activity-title,
-.activity-subtitle {
-	font-size: .9em;
-	display: block;
-}
-
-.activity-subtitle,
-.activity-date {
-	font-size: .8em;
-}
-
 #newMembers a {
 	color: #415677;
 	text-decoration: none;
 	top: 0;
+}
+
+#newMembers {
+	@extend %brdr-btm;
+	
+	@media #{$brk-tablet} {
+		border-right: 1px solid #ddd;
+	}
+}
+
+#recentActivity {
+	@extend %brdr-btm;
+	
+}
+
+#newMembers img,
+#recentActivity img {
+	@extend %roundy;
+	width: 30px;
+}
+
+.activity-item {
+	font-size: .9em;
+}
+
+.activity-subtitle,
+.activity-date {
+	display: block;
+	font-size: .8em;
 }
 
 .nameEmail,
@@ -32,6 +40,6 @@
 }
 
 .activity-date,
-.user-activity img:nth-of-type(2) {
+activity-item img:nth-of-type(2) {
 	float: right;
 }
