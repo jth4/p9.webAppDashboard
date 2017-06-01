@@ -1,6 +1,6 @@
-//////////////////////
+// ===================
 // Alert
-//////////////////////
+// ===================
 
 const close = document.getElementById('alertClose');
 
@@ -17,9 +17,9 @@ close.addEventListener('click', function () {
 
 // Charts
 
-//////////////////////
+// ===================
 // Visitors Chart
-//////////////////////
+// ===================
 
 var ctx = document.getElementById('trafficChart').getContext('2d');
 var chart = new Chart(ctx, {
@@ -41,9 +41,9 @@ var chart = new Chart(ctx, {
     options: {}
 });
 
-//////////////////////
-//Daily Traffic Chart
-//////////////////////
+// ===================
+// Daily Traffic Chart
+// ===================
 
 var ctx = document.getElementById('dailyTrafficChart').getContext('2d');
 var chart = new Chart(ctx, {
@@ -65,9 +65,9 @@ var chart = new Chart(ctx, {
     options: {}
 });
 
-//////////////////////
+// ===================
 // Mobile Users Chart
-//////////////////////
+// ===================
 
 var ctx = document.getElementById('mobileUsersChart').getContext('2d');
 var chart = new Chart(ctx, {

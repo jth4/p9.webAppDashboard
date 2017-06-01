@@ -1,0 +1,30 @@
+nav {
+	float: left;
+	margin-right: auto;
+	width: 10%;
+}
+
+.nav-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	align-content:center;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	margin-top: 15px;
+	width: 100%;
+	padding: 25%;
+	display: block;
+}
+
+nav img {
+	vertical-align: middle;	
+}
+
+.nav-selected {
+	border-left: 3px solid limegreen;
+}

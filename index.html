@@ -7,6 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/application.css">
 </head>
 <body>
 
@@ -44,7 +45,7 @@
 	
 	<nav role="navigation">
 	  <ul class="nav-list">
-	    <li><a href="index.html"><img src="icons/icon-dashboard.svg" title="Dashboard" alt="Dashboard"></a></li>
+	    <li class="nav-selected"><a href="index.html"><img src="icons/icon-dashboard.svg" title="Dashboard" alt="Dashboard"></a></li>
 	    <li><a href="#" class="nav-links"><img src="icons/icon-members.svg" title="Members" alt="Members"></a></li>
 	    <li><a href="#" class="nav-links"><img src="icons/icon-visits.svg" title="Visits" alt="Visits page"></a></li>
 	    <li><a href="#" class="nav-links"><img src="icons/icon-settings.svg" title="Settings" alt="Settings"></a></li>
@@ -57,11 +58,11 @@
 	
 		<!-- SUBHEADER -->
 		
-		<div id="subheader"
-				<h1>Dashboard</h1>
-			<div class="searchArea">
-				<input type="text" placeholder="search">
-			</div>
+		<div id="subheader">
+			<ul class="subheader-list">
+				<li class="tabName"><h2>Dashboard</h2></li>
+				<li class="dashSearch"><input type="text" placeholder="search"></li>
+			</ul>
 		</div>
 		
 		<!-- ALERT -->
@@ -194,6 +195,8 @@
 				
 			</div>
 			
+			<!-- Recent Activity -->
+			
 			<div id="recentActivity">
 				<h2>Recent Activity</h2>
 				
@@ -236,6 +239,7 @@
 		<!-- MESSAGES + SETTINGS -->
 		
 		<div class="col-2">
+		
 			<div id="messageUser">
 				<h2>Message User</h2>
 				<input type="text" placeholder="Search for User" />

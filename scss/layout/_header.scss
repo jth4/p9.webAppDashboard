@@ -1,0 +1,36 @@
+header {
+	overflow: hidden;
+}
+
+.header-list {
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.logo {
+	font-size: 24px;
+	float: left;
+	margin-right: auto;
+}
+
+.notification-bell {
+	width: 30px;
+}
+
+.userAvatar {
+	border-left: 1px solid #bbb;
+	padding-left: 15px;
+}
+.userAvatar img {
+	border-radius: 50%;
+	width: 30px;
+}
+
+.userName {
+	padding-right: 10px;
+}
+
+.header-list :not(:first-child) {
+	margin-right: 10px;
+}

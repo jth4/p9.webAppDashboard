@@ -1,0 +1,25 @@
+#messageUser {
+	padding: 10px;
+}
+
+#messageUser h2 {
+	padding: 0;
+}
+
+#messageUser input,
+#messageUser textarea {
+	border: 1px solid #bbb;
+	width: 100%;
+	margin: 10px 0;
+	border-radius: 5px;
+}
+
+#messageUser textarea {
+	height: 5rem;
+}
+
+#messageUser button {
+	width: 100%;
+	border: none;
+	padding: 5px;
+}

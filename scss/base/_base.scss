@@ -1,0 +1,37 @@
+*{
+	box-sizing: border-box;
+}
+
+header,
+#alert,
+button {
+	background-color: $color-prim;
+	color: white;
+}
+
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: $color-sec;
+}
+
+html, body {
+	height: 100%;
+}
+
+li {
+	list-style-type: none;
+}
+
+.col-2 {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

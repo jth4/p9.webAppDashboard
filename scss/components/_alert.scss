@@ -1,0 +1,28 @@
+#alert,
+.noAlerts {
+	border-radius: 15px;
+	margin: 10px 20px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+#alert button {
+	text-decoration: none;
+	color: white;
+	border: none;
+	background-color: red;
+	float: right;
+	vertical-align: middle;
+}
+
+#alert span,
+.noAlerts span {
+	max-width: 90%;
+	float: left;
+}
+
+.noAlerts {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	
+}

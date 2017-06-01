@@ -1,0 +1,37 @@
+#subheader {
+	background-color: #eee;
+	display: flex;
+	padding: 15px 0;
+	align-content: center;
+	align-items: center;
+	position: relative;
+
+}
+
+.subheader-list {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.tabName {
+	background-color: white;
+	font-size: 1.5em;
+	float: left;
+	margin-right: auto;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+	
+}
+
+#subheader input{
+	float: right;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px 15px;
+	border: 1px solid #ddd;
+	
+}
