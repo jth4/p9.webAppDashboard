@@ -19,14 +19,40 @@
 			<strong>Your</strong>App<sup>TM</sup>
 		</li>
 		
-		<li class="notification-bell">
-			<svg id="bell" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g id="_x36__6_">
-				<g>
-					<path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
-						c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/></g></g>
-			</svg>
+		<li id="notification-bell">
+			<a href="#">
+				<svg id="bell" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g id="_x36__6_">
+					<g>
+						<path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+							c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/></g></g>
+				</svg>
+				<div id="bellDot"></div>
+			</a>
 		</li>
+		
+				<!-- Modal -->
+		
+					<div id="bellAlerts" class="modal">
+		
+					  <div class="modal-content">
+					    
+					    <span class="close">&times;</span>
+					    
+					    <ul class="modal-notifications">
+						    <li class="modal-header">Notifications</li>
+							    <li class="modal=item"><a href="#">Techdegree Project Update: Needs Work</a></li>
+							    <li class="modal=item"><a href="#">Remember to milk the goat.</a></li>
+							    <li class="modal=item"><a href="#">You're not sure why, but here you are anyways.</a></li>
+						</ul>
+					  
+					  </div>
+					  
+					</div>
+				
+				<!-- End Modal -->
+		
+		
 		
 		<li class="userAvatar">
 			<img src="img/lego1.jpg" alt="profile picture"></li>
@@ -51,14 +77,18 @@
 	
 
 
-	<main>
+	<main class="clearfix">
 	
 		<!-- SUBHEADER -->
 		
 		<div id="subheader">
 			<ul class="subheader-list">
 				<li class="tabName"><h2>Dashboard</h2></li>
-				<li class="dashSearch"><input type="text" placeholder="search"></li>
+				
+				<li class="searchbar">
+					<img src="icons/magnifying-glass.svg" class="magGlass">
+					<input type="text" placeholder="Search">
+				</li>
 			</ul>
 		</div>
 		
@@ -80,15 +110,15 @@
 		<div id="traffic">
 			<ul class="traffic-list clearfix">
 				<li><h2>Traffic</h2></li>
-				<li><a href="#">Hourly</a></li>
-				<li><a href="#">Daily</a></li>
-				<li class="selected"><a href="#">Weekly</a></li>
-				<li><a href="#">Monthly</a></li>
+				<li id="traffic-btn-hourly"><a href="#">Hourly</a></li>
+				<li id="traffic-btn-daily"><a href="#">Daily</a></li>
+				<li id="traffic-btn-weekly" class="selected"><a href="#">Weekly</a></li>
+				<li><a href="#" id="traffic-btn-monthly">Monthly</a></li>
 			</ul>
 			<canvas id="trafficChart"></canvas>
 		</div>
 		
-		<div class="col-2">
+		<div class="col-2 midChart">
 			<div id="dailyTraffic">
 				<h2>Daily Traffic</h2>
 				<canvas id="dailyTrafficChart"></canvas>
@@ -160,7 +190,7 @@
 		
 		<!-- MEMBER ACTIVITY -->
 		
-		<div class="col-2">
+		<div class="col-2 col-2-btm">
 			<div id="newMembers">
 				<h2>New Members</h2>
 				
@@ -196,7 +226,7 @@
 						</div>
 					<span class="activity-date">4/21/17</span>
 				</div>
-				
+
 			</div>
 			
 			<!-- Recent Activity -->
@@ -210,7 +240,7 @@
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
 							<span class="activity-subtitle">4 hours ago</span>
 						</div>
-					<img src="icons/icon-arrowRight.svg">
+					<img class="rightArrow" src="icons/icon-arrowRight.svg">
 				</div>
 				<div class="activity-item">
 					<img src="img/lego1.jpg">
@@ -218,7 +248,7 @@
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
 							<span class="activity-subtitle">4 hours ago</span>
 						</div>
-					<img src="icons/icon-arrowRight.svg">
+					<img class="rightArrow" src="icons/icon-arrowRight.svg">
 				</div>
 				<div class="activity-item">
 					<img src="img/lego1.jpg">
@@ -226,7 +256,7 @@
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
 							<span class="activity-subtitle">4 hours ago</span>
 						</div>
-					<img src="icons/icon-arrowRight.svg">
+					<img class="rightArrow" src="icons/icon-arrowRight.svg">
 				</div>
 				<div class="activity-item">
 					<img src="img/lego1.jpg">
@@ -234,7 +264,7 @@
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
 							<span class="activity-subtitle">4 hours ago</span>
 						</div>
-					<img src="icons/icon-arrowRight.svg">
+					<img class="rightArrow" src="icons/icon-arrowRight.svg">
 				</div>
 				
 			</div>
@@ -242,29 +272,57 @@
 		
 		<!-- MESSAGES + SETTINGS -->
 		
-		<div class="col-2">
+		<div class="col-2 col-2-top">
 		
 			<div id="messageUser">
-				<h2>Message User</h2>
-				<input type="text" placeholder="Search for User" />
-				<textarea placeholder="Message for User"></textarea>
-				<button>SEND</button>
+				
+				<form id="messageForm">
+					<h2>Message User</h2>
+					
+					<input type="text" placeholder="Search for User" />
+					<textarea placeholder="Message for User"></textarea>
+					
+					<button>SEND</button>
+				</form>
 			</div>
 			
-			<div id="settings">
-				<h2>Settings</h2>
-				Send Email Notifications
-				<input type="checkbox">
-				Set Profile to Public
-				<input type="checkbox">
-				<select>
-					<option selected disabled>Select Timezone</option>
-					<option>2000 B.C.</option>
-					<option>1955 A.D.</option>
-					<option>2700 A.D.X</option>
-				</select>
-				<button>SAVE</button>
-				<button>CANCEL</button>	
+			
+			
+			<div id="settings">	
+				
+				<form id="settingsForm">
+					<h2>Settings</h2>
+					
+					<div class="toggle">
+						<p>Send Email Notifications</p>
+						<label class="switch">
+						  <input type="checkbox">
+						  <div class="slider round"></div>
+						</label>
+					</div>
+					
+					<div class="toggle">
+						<p>Set Profile To Public</p>
+						<label class="switch">
+						  <input type="checkbox">
+						  <div class="slider round"></div>
+						</label>
+					</div>
+				
+					<div class="select-style">
+						<select>
+							<option selected disabled>Select Timezone</option>
+							<option>2000 B.C.</option>
+							<option>1955 A.D.</option>
+							<option>2700 A.D.X</option>
+						</select>
+					
+						<img class="downArrow" src="icons/icon-arrowDown.svg">
+					</div>
+					
+					<button>SAVE</button>
+					<button>CANCEL</button>	
+				</form>
 
 			</div>
 		</div>

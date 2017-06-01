@@ -11,9 +11,10 @@
 	color: white;
 	border: none;
 	border-radius: 5px;
-	background-color: red;
 	float: right;
 	vertical-align: middle;
+	padding: 0;
+	margin-right: 5px;
 }
 
 #alert span,
@@ -25,5 +26,4 @@
 .noAlerts {
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
-	
 }

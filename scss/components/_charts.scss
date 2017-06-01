@@ -4,8 +4,6 @@
 	@extend %brdr-btm;
 }
 
-.traffic-list {
-}
 
 .traffic-list li:first-of-type{
 	float: left;
@@ -16,7 +14,6 @@
 	background: $color-prim;
 	border-radius: 5px;
 	color: white;
-	padding: 5px;
 	float: right;
 	margin-left: 5px;
 	font-size: .8em;
@@ -24,18 +21,38 @@
 	letter-spacing: .8px;
 }
 
+.traffic-list a {
+	display: inline-block;	
+	padding: 5px;
+}
+
 .selected {
 	background-color: $accent !important;
 }
 
 //Daily Traffic
+
+.midCharts {
+	@media #{$brk-tablet} {
+		
+	}
+}
+
 #dailyTraffic {
 	@extend %brdr-btm;
+	
+	@media #{$brk-tablet} {
+		border-bottom: none;
+		border-right: 1px solid #ddd;
+	}
 }
 
 //Mobile Users
 #mobileUsers {
-	@extend %brdr-btm;
+
+	@media #{$brk-tablet} {
+		padding-left: 15px;	
+	}
 	
 }
 

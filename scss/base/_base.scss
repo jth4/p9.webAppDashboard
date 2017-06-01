@@ -9,11 +9,22 @@ button {
 	color: white;
 }
 
+input, textarea, select {
+	color: #777;
+}
+
 body{
 	width: 100%;
 	margin: 0;
 	padding: 0;
 	background-color: $color-sec;
+}
+
+
+h2 {
+	padding-left: 0 !important;
+	font-size: 18px;
+	text-transform: uppercase;
 }
 
 html, body {
@@ -34,7 +45,11 @@ li {
 	list-style-type: none;
 }
 
-.col-2 {
+select {
+   -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none;       /* remove default arrow */
+   background-image: url(...);   /* add custom arrow */
 }
 
 .clearfix:after {
