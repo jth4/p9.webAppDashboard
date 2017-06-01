@@ -1,7 +1,16 @@
+#mainWrap {
+	padding: 0 10px;
+	max-width: 850px;
+	margin: 0 auto;
+}
+
 main {	
-	float: right;
 	background: white;
-	width: 90%;
+	
+ @media#{$brk-tablet}{
+	float: right;
+	width: calc(100% - 80px);
+	}
 }
 
 main h2 {

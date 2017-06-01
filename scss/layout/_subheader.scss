@@ -34,4 +34,8 @@
 	margin: 5px 15px;
 	border: 1px solid #ddd;
 	
+	@media #{$brk-tablet}{
+		width: 300px;
+	}
+	
 }

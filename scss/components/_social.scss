@@ -8,13 +8,18 @@
 }
 
 .social-icon {
-	background: #27344d;
-	border-radius: 50%;
+	background: $color-prim;
+	@extend %roundy;
 	fill: white;
 	padding: 10px;
 	display: inline-block;
 	float: left;
 	margin-right: auto;
+	
+	@media #{$brk-tablet} {
+		width: 70px;
+		height: 70px;
+	}
 }
 
 .social-stats-box {
@@ -25,9 +30,14 @@
 }
 
 .socialNetwork {
-	color: #415677;
+	color: $accent;
 }
 
 .socialNumbers {
 	font-size: 1.5em;
+	
+	@media #{$brk-tablet} {
+		font-size: 3em;
+	}
 }
+
