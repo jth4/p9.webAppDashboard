@@ -42,16 +42,13 @@ button {
 /* Header */
 
 header {
-	top: 0;
-	left: 0;
-	width: 100%;
 	overflow: hidden;
-	
 }
 
 .header-list {
 	display: flex;
 	align-items: center;
+	margin: 10px 0;
 }
 
 .logo {
@@ -61,16 +58,24 @@ header {
 }
 
 .notification-bell {
-	width: 35px;
+	width: 30px;
 }
 
+.userAvatar {
+	border-left: 1px solid #bbb;
+	padding-left: 15px;
+}
 .userAvatar img {
 	border-radius: 50%;
-	width: 40px;
+	width: 30px;
+}
+
+.userName {
+	padding-right: 10px;
 }
 
 .header-list :not(:first-child) {
-	margin-right: 15px;
+	margin-right: 10px;
 	
 }
 
@@ -78,23 +83,27 @@ header {
 
 nav {
 	float: left;
+	margin-right: auto;
 	width: 10%;
-	
 }
 
-nav ul{
+.nav-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	align-content:center;
 	margin: 0;
 	padding: 0;
 }
 
 nav li {
-	padding: 10px 30%;
+	margin-top: 15px;
+
 }
 
 nav img {
-	min-width: 20px;
-	max-width: 30px;
-	
+	width: 30px;
 }
 
 /* Subheader */
