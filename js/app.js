@@ -1,3 +1,11 @@
+// ---------------------------------------
+
+
+	// Alerts & Notifications
+	
+
+// ---------------------------------------
+
 // ===================
 // Bell Notification
 // ===================
@@ -24,7 +32,7 @@ window.addEventListener('click', function() {
 
 
 // ===================
-// Alert
+// Alert Message
 // ===================
 
 const close = document.getElementById('alertClose');
@@ -186,8 +194,9 @@ function trafficHourly() {
 	buttonChange(trafficBtnHourly);
 };
 
-
-// Change Button Style
+// =========================
+// Change Chart Button Style
+// =========================
 
 function buttonChange(periodicBtn) {
 	
@@ -200,7 +209,7 @@ function buttonChange(periodicBtn) {
 		if(trafficBtns[i] === periodicBtn) {
 			trafficBtns[i].className = 'selected';
 		} else {
-			periodicBtn.className = '';
+			trafficBtns[i].className = '';
 		}
 	};
 };
@@ -274,3 +283,131 @@ var chart = new Chart(ctx, {
         }
     }
 });
+
+// ---------------------------------------
+
+
+	// User Messages
+	
+
+// ---------------------------------------
+
+var messageSubmit = document.getElementById('messageSubmit');
+var userMessage = document.getElementById('user_message');
+var userSearch = document.getElementById('user_search');
+
+// ========================
+// Confirmation / Rejection
+// ========================
+
+messageSubmit.addEventListener('click', function(e) {
+	e.preventDefault();
+	
+	if(!userMessage.value || !userSearch.value){
+		alert('Whoops!  Looks like you forgot to select a user or type a message.');
+	} else {
+		alert('Message Submitted Successfully.');
+		userMessage.value = '';
+		userSearch.value = '';
+	}
+});
+
+
+// ============
+// Autocomplete
+// ============
+
+new Awesomplete(userSearch, {
+	list: [
+		"Alex Grey",
+		"Billy The Kid",
+		"Carol King",
+		"Doris Day",
+		"Elon Musk",
+		"Frank Lloyd Wright",
+		"Greg Stevens",
+		"Henry Wigglesheimer",
+		"Ivan Krotchevitch",
+		"Jessica Messica",
+		"Kid Cudi",
+		"Lori Hammerstein",
+		"Misty From Pokemon",
+		"Nora Jones",
+		"Opra Winfrey",
+		"Patrick Ewing",
+		"Quincy Jones",
+		"Rocky Raccoon",
+		"Steve Buschemi",
+		"Tina Turner",
+		"Ulysses Richardson",
+		"Victoria Schmictoria",
+		"Winston Minston",
+		"Xavier, Charles",
+		"Yolanda Schmolonda",
+		"Zipp Grasswell",
+		]
+});
+
+// ---------------------------------------
+
+
+	// Settings
+	
+
+// ---------------------------------------
+
+
+var emailNotifications = document.getElementById('emailNotifications');
+var publicProfile = document.getElementById('publicProfile');
+var timezone = document.getElementById('timezone');
+
+var settingsSave = document.getElementById('settingsSave');
+var settingsCancel = document.getElementById('settingsCancel');
+
+
+
+settingsSave.addEventListener('click', function(e) {
+	e.preventDefault();
+	
+		//Localstorage Save
+		
+		function save(){
+		    localStorage.setItem('publicProfile', publicProfile.checked);
+		    
+		    localStorage.setItem('emailNotifications', emailNotifications.checked);
+		    
+		    localStorage.setItem('timezone', timezone.selectedIndex);
+		};
+		
+		save();
+	
+	alert('Settings have been successfully saved.');
+});
+
+// Cancel Settings
+
+settingsCancel.addEventListener('click', function(e) {
+	e.preventDefault();
+	emailNotifications.checked = false;
+	publicProfile.checked = false;
+	timezone.selectedIndex = 0;
+	
+	alert('Settings reset.  Click "Save" to commit these changes.')
+	
+});
+
+
+//Localstorage Load
+
+function load(){    
+    var checked = JSON.parse(localStorage.getItem('publicProfile'));
+    publicProfile.checked = checked;
+    
+    var checked2 = JSON.parse(localStorage.getItem('emailNotifications'));
+    emailNotifications.checked = checked2;
+    
+    var timezoneIndex = JSON.parse(localStorage.getItem('timezone'));
+    timezone.selectedIndex = timezoneIndex;
+}
+
+load();

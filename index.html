@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/awesomplete.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/application.css">
 </head>
@@ -279,10 +280,11 @@
 				<form id="messageForm">
 					<h2>Message User</h2>
 					
-					<input type="text" placeholder="Search for User" />
-					<textarea placeholder="Message for User"></textarea>
+					<input type="text" placeholder="Search for User" name="user_search" id="user_search">
+						
+					<textarea placeholder="Message for User" name="user_message" id="user_message"></textarea>
 					
-					<button>SEND</button>
+					<button type="submit" id="messageSubmit">SEND</button>
 				</form>
 			</div>
 			
@@ -296,7 +298,7 @@
 					<div class="toggle">
 						<p>Send Email Notifications</p>
 						<label class="switch">
-						  <input type="checkbox">
+						  <input type="checkbox" name="settings" id="emailNotifications" value="settings">
 						  <div class="slider round"></div>
 						</label>
 					</div>
@@ -304,13 +306,13 @@
 					<div class="toggle">
 						<p>Set Profile To Public</p>
 						<label class="switch">
-						  <input type="checkbox">
+						  <input type="checkbox" name="settings" id="publicProfile" value="settings">
 						  <div class="slider round"></div>
 						</label>
 					</div>
 				
 					<div class="select-style">
-						<select>
+						<select name="timezone" id="timezone">
 							<option selected disabled>Select Timezone</option>
 							<option>2000 B.C.</option>
 							<option>1955 A.D.</option>
@@ -320,8 +322,8 @@
 						<img class="downArrow" src="icons/icon-arrowDown.svg">
 					</div>
 					
-					<button>SAVE</button>
-					<button>CANCEL</button>	
+					<button type="submit" id="settingsSave">SAVE</button>
+					<button type="submit" id="settingsCancel">CANCEL</button>	
 				</form>
 
 			</div>
@@ -331,7 +333,7 @@
 
 </div>
 
-
+<script src="js/awesomplete.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js" type="text/javascript"></script>
 <script src="js/app.js" type="text/javascript"></script>
 </body>
