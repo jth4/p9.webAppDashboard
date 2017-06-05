@@ -10,10 +10,10 @@
 // Bell Notification
 // ===================
 
-const bellWrap = document.getElementById('notification-bell')
-const bellDot = document.getElementById('bellDot');
-const modal = document.getElementById('bellAlerts');
-const span = document.getElementsByClassName("close")[0];
+var bellWrap = document.getElementById('notification-bell')
+var bellDot = document.getElementById('bellDot');
+var modal = document.getElementById('bellAlerts');
+var span = document.getElementsByClassName("close")[0];
 
 bellWrap.addEventListener('click', function() {
 	bellDot.style.opacity = 0;	
@@ -35,7 +35,7 @@ window.addEventListener('click', function() {
 // Alert Message
 // ===================
 
-const close = document.getElementById('alertClose');
+var close = document.getElementById('alertClose');
 
 close.addEventListener('click', function () {
 	const alert = document.getElementById('alert');

@@ -407,9 +407,6 @@ main {
   .col-2-btm {
     border-bottom: 1px solid #ddd; }
 
-  /*	.col-2-top {
-  		display: inline;
-  	}*/
   .col-2 > div {
     width: 49%;
     display: inline-block; }
@@ -492,7 +489,7 @@ main {
   border-radius: 5px; }
 
 #messageUser textarea {
-  height: 5rem; }
+  height: 5.75rem; }
 
 #messageUser button {
   width: 100%;
