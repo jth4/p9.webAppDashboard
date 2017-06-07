@@ -10,7 +10,7 @@
 // Bell Notification
 // ===================
 
-var bellWrap = document.getElementById('notification-bell')
+var bellWrap = document.getElementById('notification-bell');
 var bellDot = document.getElementById('bellDot');
 var modal = document.getElementById('bellAlerts');
 var span = document.getElementsByClassName("close")[0];
@@ -35,10 +35,10 @@ window.addEventListener('click', function() {
 // Alert Message
 // ===================
 
-var close = document.getElementById('alertClose');
+var closeAlert = document.getElementById('alertClose');
 
-close.addEventListener('click', function () {
-	const alert = document.getElementById('alert');
+closeAlert.addEventListener('click', function () {
+	var alert = document.getElementById('alert');
 	alert.innerHTML = "You're all caught up!";
 	
 	function changeAlertStatus(){ 
@@ -64,10 +64,10 @@ close.addEventListener('click', function () {
 
 
 
-let trafficBtnMonthly = document.getElementById('traffic-btn-monthly');
-let trafficBtnWeekly = document.getElementById('traffic-btn-weekly');
-let trafficBtnDaily = document.getElementById('traffic-btn-daily');
-let trafficBtnHourly = document.getElementById('traffic-btn-hourly');
+var trafficBtnMonthly = document.getElementById('traffic-btn-monthly');
+var trafficBtnWeekly = document.getElementById('traffic-btn-weekly');
+var trafficBtnDaily = document.getElementById('traffic-btn-daily');
+var trafficBtnHourly = document.getElementById('traffic-btn-hourly');
 
 
 trafficBtnMonthly.addEventListener('click', trafficMonthly);
@@ -105,7 +105,7 @@ function trafficMonthly(e) {
 	});
 
 	buttonChange(trafficBtnMonthly);
-};
+}
 
 function trafficWeekly(e) {
 
@@ -137,7 +137,7 @@ function trafficWeekly(e) {
 	});
 
 	buttonChange(trafficBtnWeekly);
-};
+}
 
 function trafficDaily(e) {
 	e.preventDefault();
@@ -167,7 +167,7 @@ function trafficDaily(e) {
 	});
 	
 	buttonChange(trafficBtnDaily);
-};
+}
 
 
 function trafficHourly(e) {
@@ -198,7 +198,7 @@ function trafficHourly(e) {
 	});
 	
 	buttonChange(trafficBtnHourly);
-};
+}
 
 // =========================
 // Change Chart Button Style
@@ -211,14 +211,14 @@ function buttonChange(periodicBtn) {
 						trafficBtnHourly, 
 						trafficBtnMonthly];
 	
-	for(i=0; i < trafficBtns.length; i+=1) {
+	for(var i=0; i < trafficBtns.length; i+=1) {
 		if(trafficBtns[i] === periodicBtn) {
 			trafficBtns[i].className = 'selected';
 		} else {
 			trafficBtns[i].className = '';
 		}
-	};
-};
+	}
+}
 
 //-------------------------------------------------------
 
@@ -383,7 +383,7 @@ settingsSave.addEventListener('click', function(e) {
 		    localStorage.setItem('emailNotifications', emailNotifications.checked);
 		    
 		    localStorage.setItem('timezone', timezone.selectedIndex);
-		};
+		}
 		
 		save();
 	
@@ -398,7 +398,7 @@ settingsCancel.addEventListener('click', function(e) {
 	publicProfile.checked = false;
 	timezone.selectedIndex = 0;
 	
-	alert('Settings will reset.  Click "Save" to commit these changes.')
+	alert('Settings will reset.  Click "Save" to commit these changes.');
 	
 });
 

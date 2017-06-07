@@ -13,7 +13,8 @@
 
 #settings p {
 	display: inline-block;
-	width: 80%;
+	max-width: 80%;
+	margin-right: auto;
 }
 
 .toggle {
@@ -25,8 +26,12 @@
 	.switch {
 	  position: relative;
 	  display: inline-block;
-	  width: 80px;
+	  width: 60px;
 	  height: 34px;
+	  
+	  @media #{$brk-tablet} {
+	  	width: 80px;
+	  }
 	}
 	
 	/* Hide default HTML checkbox */
@@ -66,9 +71,15 @@
 	}
 	
 	input:checked + .slider:before {
-	  -webkit-transform: translateX(46px);
-	  -ms-transform: translateX(46px);
-	  transform: translateX(46px);
+	  -webkit-transform: translateX(26px);
+	  -ms-transform: translateX(26px);
+	  transform: translateX(26px);
+	  
+	  @media #{$brk-tablet} {
+	  	-webkit-transform: translateX(46px);
+	  	-ms-transform: translateX(46px);
+	  	transform: translateX(46px);
+	  }
 	}
 	
 	/* Rounded sliders */

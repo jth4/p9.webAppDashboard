@@ -5,9 +5,7 @@
 	<title>YourApp</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-	<link rel="stylesheet" href="css/normalize.min.css">
 	<link rel="stylesheet" href="css/awesomplete.css">
-	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/application.css">
 </head>
 <body>
@@ -22,7 +20,7 @@
 		
 		<li id="notification-bell">
 			<a href="#">
-				<svg id="bell" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				<svg id="bell" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g id="_x36__6_">
 					<g>
 						<path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
@@ -32,41 +30,40 @@
 			</a>
 		</li>
 		
-				<!-- Modal -->
-		
-					<div id="bellAlerts" class="modal">
-		
-					  <div class="modal-content">
-					    
-					    <span class="close">&times;</span>
-					    
-					    <ul class="modal-notifications">
-						    <li class="modal-header">Notifications</li>
-							    <li class="modal=item"><a href="#">Techdegree Project Update: Needs Work</a></li>
-							    <li class="modal=item"><a href="#">Remember to milk the goat.</a></li>
-							    <li class="modal=item"><a href="#">You're not sure why, but here you are anyways.</a></li>
-						</ul>
-					  
-					  </div>
-					  
-					</div>
-				
-				<!-- End Modal -->
-		
-		
-		
 		<li class="userAvatar">
 			<img src="img/lego1.jpg" alt="profile picture"></li>
 			
 		<li class="userName">John Hill</li>	
-		
-		</div>
 	</ul>
+	
+	<!-- Modal -->
+	
+				<div id="bellAlerts" class="modal">
+	
+				  <div class="modal-content">
+				    
+				    <span class="close">&times;</span>
+				    
+				    <ul class="modal-notifications">
+					    
+					    <li class="modal-header">Notifications</li>
+						    
+						    <li><a href="#">Techdegree Project Update: Needs Work</a></li>
+						    <li><a href="#">Remember to milk the goat.</a></li>
+						    <li><a href="#">You're not sure why, but here you are anyways.</a></li>
+					</ul>
+				  
+				  </div>
+				  
+				</div>
+			
+			<!-- End Modal -->
+	
 </header>
 
 	<!-- Nav -->
 	
-	<nav role="navigation">
+	<nav>
 	  <ul class="nav-list">
 	    <li class="nav-selected"><a href="index.html"><img src="icons/icon-dashboard.svg" title="Dashboard" alt="Dashboard"></a></li>
 	    <li><a href="#" class="nav-links"><img src="icons/icon-members.svg" title="Members" alt="Members"></a></li>
@@ -87,7 +84,7 @@
 				<li class="tabName"><h2>Dashboard</h2></li>
 				
 				<li class="searchbar">
-					<img src="icons/magnifying-glass.svg" class="magGlass">
+					<img src="icons/magnifying-glass.svg" class="magGlass" alt="Icon of Magnifying Glass">
 					<input type="text" placeholder="Search">
 				</li>
 			</ul>
@@ -196,7 +193,7 @@
 				<h2>New Members</h2>
 				
 				<div class="activity-item">
-					<img src="img/lego1.jpg">
+					<img src="img/lego1.jpg" alt="User avatar">
 						<div class="nameEmail">
 							<span class="activity-title">Todd Blanc</span>
 							<a class="activity-subtitle" href="mailto:demo@demo.com">toddblanc@gmail.com</a>
@@ -204,7 +201,7 @@
 					<span class="activity-date">4/21/17</span>
 				</div>
 				<div class="activity-item">
-					<img src="img/lego1.jpg">
+					<img src="img/lego1.jpg" alt="User avatar">
 						<div class="nameEmail">
 							<span class="activity-title">Tina Green</span>
 							<a class="activity-subtitle" href="mailto:demo@demo.com">tinagreen@gmail.com</a>
@@ -212,7 +209,7 @@
 					<span class="activity-date">4/21/17</span>
 				</div>
 				<div class="activity-item">
-					<img src="img/lego1.jpg">
+					<img src="img/lego1.jpg" alt="User avatar">
 						<div class="nameEmail">
 							<span class="activity-title">Tom Redding</span>
 							<a class="activity-subtitle" href="mailto:demo@demo.com">tomredding@gmail.com</a>
@@ -220,7 +217,7 @@
 					<span class="activity-date">4/21/17</span>
 				</div>
 				<div class="activity-item">
-					<img src="img/lego1.jpg">
+					<img src="img/lego1.jpg" alt="User avatar">
 						<div class="nameEmail">
 							<span class="activity-title">Tasha Bloom</span>
 							<a class="activity-subtitle" href="mailto:demo@demo.com">tashabloom@gmail.com</a>
@@ -236,36 +233,36 @@
 				<h2>Recent Activity</h2>
 				
 				<div class="activity-item">
-					<img src="img/lego1.jpg">
+					<img src="img/lego1.jpg" alt="User avatar">
 						<div class="activityTime">
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
 							<span class="activity-subtitle">4 hours ago</span>
 						</div>
-					<img class="rightArrow" src="icons/icon-arrowRight.svg">
+					<img class="rightArrow" src="icons/icon-arrowRight.svg" alt="">
 				</div>
 				<div class="activity-item">
-					<img src="img/lego1.jpg">
+					<img src="img/lego1.jpg" alt="User avatar">
 						<div class="activityTime">
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
 							<span class="activity-subtitle">4 hours ago</span>
 						</div>
-					<img class="rightArrow" src="icons/icon-arrowRight.svg">
+					<img class="rightArrow" src="icons/icon-arrowRight.svg" alt="">
 				</div>
 				<div class="activity-item">
-					<img src="img/lego1.jpg">
+					<img src="img/lego1.jpg" alt="User avatar">
 						<div class="activityTime">
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
 							<span class="activity-subtitle">4 hours ago</span>
 						</div>
-					<img class="rightArrow" src="icons/icon-arrowRight.svg">
+					<img class="rightArrow" src="icons/icon-arrowRight.svg" alt="">
 				</div>
 				<div class="activity-item">
-					<img src="img/lego1.jpg">
+					<img src="img/lego1.jpg" alt="User avatar">
 						<div class="activityTime">
 							<span class="activity-title">Vitoria Chambers commented on YourApp's SEO Tips</span>
 							<span class="activity-subtitle">4 hours ago</span>
 						</div>
-					<img class="rightArrow" src="icons/icon-arrowRight.svg">
+					<img class="rightArrow" src="icons/icon-arrowRight.svg" alt="">
 				</div>
 				
 			</div>
@@ -299,7 +296,7 @@
 						<p>Send Email Notifications</p>
 						<label class="switch">
 						  <input type="checkbox" name="settings" id="emailNotifications" value="settings">
-						  <div class="slider round"></div>
+						  <span class="slider round"></span>
 						</label>
 					</div>
 					
@@ -307,7 +304,7 @@
 						<p>Set Profile To Public</p>
 						<label class="switch">
 						  <input type="checkbox" name="settings" id="publicProfile" value="settings">
-						  <div class="slider round"></div>
+						  <span class="slider round"></span>
 						</label>
 					</div>
 				
@@ -319,7 +316,7 @@
 							<option>2700 A.D.X</option>
 						</select>
 					
-						<img class="downArrow" src="icons/icon-arrowDown.svg">
+						<img class="downArrow" src="icons/icon-arrowDown.svg" alt="">
 					</div>
 					
 					<button type="submit" id="settingsSave">SAVE</button>
@@ -327,14 +324,14 @@
 				</form>
 
 			</div>
-		</div>
-		
+	  	</div>
+	  	
+	  	</div>
 	</main>
-
-</div>
 
 <script src="js/awesomplete.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js" type="text/javascript"></script>
 <script src="js/app.js" type="text/javascript"></script>
+
 </body>
 </html>
