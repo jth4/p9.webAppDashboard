@@ -16,9 +16,14 @@
 	color: white;
 	float: right;
 	margin-left: 5px;
-	font-size: .8em;
+	font-size: .6em;
 	font-weight: bold;
-	letter-spacing: .8px;
+
+	
+	@media #{$brk-tablet} {
+		font-size: .8em;
+		letter-spacing: .8px;
+	}
 }
 
 .traffic-list a {

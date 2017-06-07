@@ -77,7 +77,8 @@ trafficBtnHourly.addEventListener('click' , trafficHourly );
 
 trafficWeekly();
 
-function trafficMonthly() {
+function trafficMonthly(e) {
+	e.preventDefault();
 
 	var ctx = document.getElementById('trafficChart').getContext('2d');
 	var chart = new Chart(ctx, {
@@ -91,7 +92,7 @@ function trafficMonthly() {
 	            label: "My First dataset",
 	            backgroundColor: 'rgba(65,86,119,.3)',
 	            borderColor: '#415677',
-	            data: [0, 10, 5, 2, 20, 30, 45, 30, 35, 25, 20, 30, 40],
+	            data: [0, 10, 5, 2, 20, 30, 45, 30, 35, 25, 20, 30],
 	        }]
 	    },
 	
@@ -106,7 +107,10 @@ function trafficMonthly() {
 	buttonChange(trafficBtnMonthly);
 };
 
-function trafficWeekly() {
+function trafficWeekly(e) {
+
+// Why dis not work?
+//	e.preventDefault();
 	
 	var ctx = document.getElementById('trafficChart').getContext('2d');
 	var chart = new Chart(ctx, {
@@ -135,7 +139,8 @@ function trafficWeekly() {
 	buttonChange(trafficBtnWeekly);
 };
 
-function trafficDaily() {
+function trafficDaily(e) {
+	e.preventDefault();
 
 	var ctx = document.getElementById('trafficChart').getContext('2d');
 	var chart = new Chart(ctx, {
@@ -165,7 +170,8 @@ function trafficDaily() {
 };
 
 
-function trafficHourly() {
+function trafficHourly(e) {
+	e.preventDefault();
 
 	var ctx = document.getElementById('trafficChart').getContext('2d');
 	var chart = new Chart(ctx, {
@@ -392,7 +398,7 @@ settingsCancel.addEventListener('click', function(e) {
 	publicProfile.checked = false;
 	timezone.selectedIndex = 0;
 	
-	alert('Settings reset.  Click "Save" to commit these changes.')
+	alert('Settings will reset.  Click "Save" to commit these changes.')
 	
 });
 

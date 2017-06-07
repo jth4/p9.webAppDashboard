@@ -1,17 +1,22 @@
 #social-container {
 	@extend %brdr-btm;
 	border-top: 1px solid #ddd;
-	margin-top: 25px;
-	
+	margin-top: 25px;	
 }
 
 .social-box-main {
 	border: 1px solid #ddd;
 	display: inline-block;
-	padding: 20px 3%;
+	padding: 3%;
 	width: 30%;
 	margin: 1%;
 	background: #eee;
+	text-align: center;
+	
+	@media #{$brk-tablet}{
+		padding: 20px 3%;
+		text-align: left;
+	}		
 }
 
 .social-icon {
@@ -20,31 +25,42 @@
 	fill: white;
 	padding: 10px;
 	display: inline-block;
-	float: left;
-	margin-right: auto;
-	
+
 	@media #{$brk-tablet} {
+		float: left;
+		margin-right: auto;
 		width: 70px;
 		height: 70px;
 	}
 }
 
 .social-stats-box {
-	width: 90%;
-	float: right;
+	width: 100%;
 	display: inline-block;
 	
+	@media #{$brk-tablet}{
+		margin-top: 5px;
+	}
 }
 
 .socialNetwork {
 	color: $accent;
+	display: none;
+	
+	@media #{$brk-tablet}{
+		display: initial;
+	}
 }
 
 .socialNumbers {
-	font-size: 1.5em;
-	
+	font-size: 1.25em;
+	color: $accent;
+	font-weight: bold;
+		
 	@media #{$brk-tablet} {
 		font-size: 3em;
+		color: initial;
+		font-weight: initial;
 	}
 }
 

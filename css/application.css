@@ -216,6 +216,15 @@ button:focus {
 * {
   box-sizing: border-box; }
 
+html, body {
+  height: 100%; }
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #273449; }
+
 header,
 #alert,
 button {
@@ -225,19 +234,13 @@ button {
 input, textarea, select {
   color: #777; }
 
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #273449; }
-
 h2 {
   padding-left: 0 !important;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase; }
-
-html, body {
-  height: 100%; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 18px; } }
 
 ul {
   padding: 0;
@@ -273,10 +276,13 @@ header {
   margin: 10px 0; }
 
 .logo {
-  font-size: 24px;
+  font-size: 18px;
   float: left;
   margin-right: auto;
   margin-left: 15px; }
+  @media (min-width: 768px) {
+    .logo {
+      font-size: 24px; } }
 
 #notification-bell {
   width: 30px; }
@@ -290,7 +296,11 @@ header {
   width: 30px; }
 
 .userName {
-  padding-right: 10px; }
+  padding-right: 10px;
+  display: none; }
+  @media (min-width: 768px) {
+    .userName {
+      display: initial; } }
 
 .header-list :not(:first-child) {
   margin-right: 10px; }
@@ -317,7 +327,7 @@ footer {
 
 .tabName {
   background-color: white;
-  font-size: 1.5em;
+  font-size: .5em;
   float: left;
   margin-right: auto;
   border-right: 1px solid #ddd;
@@ -326,6 +336,9 @@ footer {
   bottom: 0;
   z-index: 100;
   padding: 0 15px; }
+  @media (min-width: 768px) {
+    .tabName {
+      font-size: 1.5em; } }
 
 #subheader input {
   float: right;
@@ -348,8 +361,6 @@ footer {
   opacity: .5; }
 
 nav {
-  /*	margin-right: auto;*/
-  /*width: 10%;*/
   width: 100%;
   height: 50px; }
   @media (min-width: 768px) {
@@ -418,7 +429,12 @@ main {
   border-radius: 15px;
   margin: 10px 0;
   padding: 10px;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: .8em; }
+  @media (min-width: 768px) {
+    #alert,
+    .noAlerts {
+      font-size: initial; } }
 
 #alert button {
   text-decoration: none;
@@ -449,9 +465,12 @@ main {
   color: white;
   float: right;
   margin-left: 5px;
-  font-size: .8em;
-  font-weight: bold;
-  letter-spacing: .8px; }
+  font-size: .6em;
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    .traffic-list li:not(:first-child) {
+      font-size: .8em;
+      letter-spacing: .8px; } }
 
 .traffic-list a {
   display: inline-block;
@@ -657,36 +676,51 @@ input:checked + .slider:before {
 .social-box-main {
   border: 1px solid #ddd;
   display: inline-block;
-  padding: 20px 3%;
+  padding: 3%;
   width: 30%;
   margin: 1%;
-  background: #eee; }
+  background: #eee;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .social-box-main {
+      padding: 20px 3%;
+      text-align: left; } }
 
 .social-icon {
   background: #415677;
   fill: white;
   padding: 10px;
-  display: inline-block;
-  float: left;
-  margin-right: auto; }
+  display: inline-block; }
   @media (min-width: 768px) {
     .social-icon {
+      float: left;
+      margin-right: auto;
       width: 70px;
       height: 70px; } }
 
 .social-stats-box {
-  width: 90%;
-  float: right;
+  width: 100%;
   display: inline-block; }
+  @media (min-width: 768px) {
+    .social-stats-box {
+      margin-top: 5px; } }
 
 .socialNetwork {
-  color: limegreen; }
+  color: limegreen;
+  display: none; }
+  @media (min-width: 768px) {
+    .socialNetwork {
+      display: initial; } }
 
 .socialNumbers {
-  font-size: 1.5em; }
+  font-size: 1.25em;
+  color: limegreen;
+  font-weight: bold; }
   @media (min-width: 768px) {
     .socialNumbers {
-      font-size: 3em; } }
+      font-size: 3em;
+      color: initial;
+      font-weight: initial; } }
 
 #notification-bell {
   position: relative; }

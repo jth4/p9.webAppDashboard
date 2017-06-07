@@ -10,10 +10,14 @@ header {
 }
 
 .logo {
-	font-size: 24px;
+	font-size: 18px;
 	float: left;
 	margin-right: auto;
 	margin-left: 15px;
+	
+	@media #{$brk-tablet}{
+		font-size: 24px;
+	}
 }
 
 #notification-bell {
@@ -31,6 +35,11 @@ header {
 
 .userName {
 	padding-right: 10px;
+	display: none;
+	
+	@media #{$brk-tablet}{
+		display: initial;
+	}
 }
 
 .header-list :not(:first-child) {

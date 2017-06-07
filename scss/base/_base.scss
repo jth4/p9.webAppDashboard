@@ -2,6 +2,17 @@
 	box-sizing: border-box;
 }
 
+html, body {
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: $color-sec;
+}
+
 header,
 #alert,
 button {
@@ -13,22 +24,14 @@ input, textarea, select {
 	color: #777;
 }
 
-body{
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	background-color: $color-sec;
-}
-
-
 h2 {
 	padding-left: 0 !important;
-	font-size: 18px;
+	font-size: 14px;
 	text-transform: uppercase;
-}
-
-html, body {
-	height: 100%;
+	
+	@media #{$brk-tablet}{
+		font-size: 18px;
+	}
 }
 
 ul {

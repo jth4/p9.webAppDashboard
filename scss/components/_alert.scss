@@ -4,6 +4,11 @@
 	margin: 10px 0;
 	padding: 10px;
 	overflow: hidden;
+	font-size: .8em;
+	
+	@media #{$brk-tablet}{
+		font-size: initial;
+	}
 }
 
 #alert button {
